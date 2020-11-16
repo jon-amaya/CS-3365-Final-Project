@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="hospital" uuid="705666b2-1846-44ea-8c35-8594fefb3b31">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\Documents\CS 3365\IntelliJ_CS3365\src\hospital.sqlite</jdbc-url>
+    </data-source>
+  </component>
+</project>
