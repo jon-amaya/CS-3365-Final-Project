@@ -30,7 +30,7 @@ public class LoginModuleModel {
     public boolean isLogin(String user, String pass, String opt) throws Exception {
         PreparedStatement pr = null;
         ResultSet rs = null;
-        String sql = "SELECT * FROM login where Username = ? and Password = ? and Title = ? ";
+        String sql = "SELECT * FROM Login where Username = ? and Password = ? and Title = ? ";
 
         try {
             pr = this.connection.prepareStatement(sql);
