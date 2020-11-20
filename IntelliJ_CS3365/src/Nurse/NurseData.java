@@ -1,2 +1,4 @@
-package Nurse;public class NurseData {
+package Nurse;
+
+public class NurseData {
 }

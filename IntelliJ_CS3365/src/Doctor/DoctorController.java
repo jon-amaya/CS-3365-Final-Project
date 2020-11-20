@@ -1,2 +1,4 @@
-package Doctor;public class DoctorController {
+package Doctor;
+
+public class DoctorController {
 }

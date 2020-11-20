@@ -1,6 +1,9 @@
 package hospitalSystem;
 
+import Doctor.DoctorController;
 import Staff.StaffController;
+import CEO.CeoController;
+import Nurse.NurseController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -43,7 +46,7 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    public void Login (ActionEvent eventt){
+    public void Login (ActionEvent event){
         try{
             if(this.loginModel.isLogin(this.username.getText(),this.password.getText(),((Option)this.combobox.getValue()).toString())){
                 Stage stage =(Stage)this.loginButton.getScene().getWindow();
@@ -52,10 +55,15 @@ public class LoginController implements Initializable {
                     case "Staff":
                         staffLogin();;
                         break;
-                    case "Nurse":
-                        staffLogin();
+                    case "Doctor":
+                        doctorLogin();
                         break;
-
+                    case "Nurse":
+                        nurseLogin();
+                        break;
+                    case "CEO":
+                        ceoLogin();
+                        break;
                 }
             }else {
                 this.loginstatus.setText("Wrong Credentials");
@@ -90,7 +98,63 @@ public class LoginController implements Initializable {
     }
 
     public void nurseLogin(){
+        try{
+            Stage nurseStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane)loader.load(getClass().getResource("/Nurse/NurseFXML.fxml").openStream());
+            NurseController nurseController = (NurseController)loader.getController();
 
+            Scene scene = new Scene(root);
+            nurseStage.setScene(scene);
+            nurseStage.setTitle("Nurse Menu");
+            nurseStage.setResizable(false);
+            nurseStage.show();
+
+
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+
+    }
+
+    public void doctorLogin(){
+        try{
+            Stage doctorStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane)loader.load(getClass().getResource("/Doctor/DoctorFXML.fxml").openStream());
+            DoctorController doctorController = (DoctorController)loader.getController();
+
+            Scene scene = new Scene(root);
+            doctorStage.setScene(scene);
+            doctorStage.setTitle("Doctor Menu");
+            doctorStage.setResizable(false);
+            doctorStage.show();
+
+
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+
+    }
+
+    //Function for CEO login
+    public void ceoLogin(){
+        try{
+            Stage ceoStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane)loader.load(getClass().getResource("/CEO/CeoFXML.fxml").openStream());
+            CeoController ceoController = (CeoController)loader.getController();
+
+            Scene scene = new Scene(root);
+            ceoStage.setScene(scene);
+            ceoStage.setTitle("CEO Menu");
+            ceoStage.setResizable(false);
+            ceoStage.show();
+
+
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
 
     }
 
