@@ -43,7 +43,7 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    public void Login (ActionEvent eventt){
+    public void Login (ActionEvent event){
         try{
             if(this.loginModel.isLogin(this.username.getText(),this.password.getText(),((Option)this.combobox.getValue()).toString())){
                 Stage stage =(Stage)this.loginButton.getScene().getWindow();
