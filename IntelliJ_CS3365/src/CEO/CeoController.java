@@ -1,2 +1,4 @@
-package CEO;public class CeoController {
+package CEO;
+
+public class CeoController {
 }
