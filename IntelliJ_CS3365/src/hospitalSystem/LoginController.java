@@ -1,9 +1,9 @@
 package hospitalSystem;
 
-import Doctor.DoctorController;
-import Staff.StaffController;
 import CEO.CeoController;
+import Doctor.DoctorController;
 import Nurse.NurseController;
+import Staff.StaffController;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 public class LoginController implements Initializable {
 
     LoginModuleModel loginModel = new LoginModuleModel();

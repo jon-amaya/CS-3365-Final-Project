@@ -2,11 +2,9 @@ package Nurse;
 
 import Nurse.patientMeasures.PatientMeasureController;
 import datbaseUtil.dbConnect;
-import hospitalSystem.LogoutController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -119,31 +117,28 @@ public class NurseController {
     @FXML
     public void isLogout(ActionEvent event) {
         try {
+            //Comment next two lines to keep nurse window open
+            Stage stage = (Stage)this.logoutButton.getScene().getWindow();
+            stage.close();
 
             //Open EnsureLogout.fxml
             Stage updateStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) FXMLLoader.load(getClass().getResource("/hospitalSystem/EnsureLogout.fxml"));
-            LogoutController logoutController = (LogoutController) loader.getController();
 
+            //Change the loader FXML file and LogoutController locations for correct employee
+            Pane root = (Pane) FXMLLoader.load(getClass().getResource("/Nurse/Logout/EnsureNurseLogout.fxml"));
+            Nurse.Logout.LogoutController logoutController = (Nurse.Logout.LogoutController) loader.getController();
 
+            //Create new scene with set title and not resizable
             Scene scene = new Scene(root);
             updateStage.setScene(scene);
             updateStage.setTitle("Logout");
             updateStage.setResizable(false);
             updateStage.show();
 
-
         } catch (Exception localException) {
             localException.printStackTrace();
         }
-    }
-
-    @FXML
-    public void closeWindow() {
-        //Comment next two lines to keep nurse window open
-        Stage stage = (Stage)this.logoutButton.getScene().getWindow();
-        stage.close();
     }
 
 }
