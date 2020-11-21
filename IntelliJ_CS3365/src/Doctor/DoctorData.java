@@ -1,2 +1,4 @@
-package Doctor;public class DoctorData {
+package Doctor;
+
+public class DoctorData {
 }
