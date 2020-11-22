@@ -175,24 +175,48 @@ public class NurseController {
 
     public void updatePatientInfo(String weight, String height, String bloodpressure, String reason, String firstname) {
         String sql = "UPDATE Patients SET Weight = ?, Height = ?, BloodPressure = ?, Reason = ? WHERE Fname = ?";
-
+        String tempweight = "", tempheight = "", tempbp = "", tempreason= "";
         try {
+
+            //get current info from database to be saved for later
+            String sqlLoad = "SELECT Weight, Height, BloodPressure, Reason FROM Patients WHERE Fname = ?";
+            try{
+                PreparedStatement ps = connection.prepareStatement(sqlLoad);
+                ps.setString(1, firstname);
+                connection = dbConnect.getConnection();
+                ResultSet rs = ps.executeQuery();
+
+                while(rs.next()) {
+                    tempweight = rs.getString("Weight");
+                    tempheight = rs.getString("Height");
+                    tempbp = rs.getString("BloodPressure");
+                    tempreason = rs.getString("Reason");
+
+                }
+                ps.close();
+                rs.close();
+
+            } catch(SQLException e) {
+                System.err.println("Error: "+ e);
+            }
+
 
             Connection connection = dbConnect.getConnection();
             assert connection != null;
             PreparedStatement ps = connection.prepareStatement(sql);
 
-            if (weight == null) {
-                weight = this.currWeight.getText();
+            //checks if entered field was empty, then will save the current data
+            if (weight.equals("")) {
+                weight = tempweight;
             }
-            if (height == null) {
-                height = this.currHeight.getText();
+            if(height.equals("")) {
+                height = tempheight;
             }
-            if (bloodpressure == null) {
-                bloodpressure = this.currBP.getText();
+            if(bloodpressure.equals("")) {
+                bloodpressure = tempbp;
             }
-            if(reason == null) {
-                reason = this.currReason.getText();
+            if(reason.equals("")){
+                reason = tempreason;
             }
 
             ps.setString(1, weight);
@@ -207,6 +231,7 @@ public class NurseController {
             System.err.println("Error: "+e);
         }
     }
+
     /*****************************************************************************/
     //Methods for clear fields buttons and to set text for label
 
