@@ -1,7 +1,6 @@
 package Nurse;
 
 import datbaseUtil.dbConnect;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -147,6 +146,7 @@ public class NurseController {
                 this.currHeight.setText(rs.getString("Height"));
                 this.currBP.setText(rs.getString("BloodPressure"));
                 this.currReason.setText(rs.getString("Reason"));
+
             }
 
             ps.close();
@@ -226,7 +226,7 @@ public class NurseController {
             ps.setString(5, firstname);
 
             ps.executeUpdate();
-            connection.close();
+            ps.close();
         } catch (SQLException e) {
             System.err.println("Error: "+e);
         }
@@ -237,10 +237,10 @@ public class NurseController {
 
     @FXML
     public void clearPatientInfo(ActionEvent event) {
-        this.newWeight.setText(null);
-        this.newHeight.setText(null);
-        this.newBP.setText(null);
-        this.newReason.setText(null);
+        this.newWeight.setText("");
+        this.newHeight.setText("");
+        this.newBP.setText("");
+        this.newReason.setText("");
 
         this.clearStatus.setText("New patient information cleared");
         this.dbUpdateStatus.setText("");
@@ -248,16 +248,16 @@ public class NurseController {
 
     @FXML
     public void clearAllInfo(ActionEvent event) {
-        this.patientFname.setText(null);
-        this.patientLname.setText(null);
-        this.currWeight.setText(null);
-        this.currHeight.setText(null);
-        this.currBP.setText(null);
-        this.currReason.setText(null);
-        this.newWeight.setText(null);
-        this.newHeight.setText(null);
-        this.newBP.setText(null);
-        this.newReason.setText(null);
+        this.patientFname.setText("");
+        this.patientLname.setText("");
+        this.currWeight.setText("");
+        this.currHeight.setText("");
+        this.currBP.setText("");
+        this.currReason.setText("");
+        this.newWeight.setText("");
+        this.newHeight.setText("");
+        this.newBP.setText("");
+        this.newReason.setText("");
 
         this.clearStatus.setText("All patient information cleared");
         this.dbUpdateStatus.setText("");

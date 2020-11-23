@@ -8,34 +8,34 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nurse.NurseController">
-   <Label layoutX="435.0" layoutY="35.0" text="Nurse Menu">
+<AnchorPane prefHeight="600.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nurse.NurseController">
+   <Label layoutX="358.0" layoutY="14.0" text="Nurse Menu">
       <font>
          <Font name="Georgia" size="25.0" />
       </font>
    </Label>
-   <Button fx:id="patientCheckButton" layoutX="406.0" layoutY="187.0" mnemonicParsing="false" onAction="#checkPatientMeasure" text="Check patient measurements" />
-   <Button fx:id="logoutButton" layoutX="456.0" layoutY="493.0" mnemonicParsing="false" onAction="#isLogout" prefHeight="25.0" prefWidth="89.0" text="Logout" />
-   <Label layoutX="383.0" layoutY="86.0" text="Please enter patient first and last name">
+   <Button fx:id="patientCheckButton" layoutX="342.0" layoutY="154.0" mnemonicParsing="false" onAction="#checkPatientMeasure" text="Check patient measurements" />
+   <Button fx:id="logoutButton" layoutX="382.0" layoutY="438.0" mnemonicParsing="false" onAction="#isLogout" prefHeight="25.0" prefWidth="89.0" text="Logout" />
+   <Label layoutX="307.0" layoutY="60.0" text="Please enter patient first and last name">
       <font>
          <Font size="14.0" />
       </font></Label>
-   <TextField fx:id="patientFname" layoutX="406.0" layoutY="120.0" prefHeight="25.0" prefWidth="180.0" promptText="First name" />
-   <TextField fx:id="patientLname" layoutX="401.0" layoutY="149.0" prefHeight="25.0" prefWidth="180.0" promptText="Last name" />
-   <Label fx:id="lookupStatus" layoutX="403.0" layoutY="226.0" prefHeight="17.0" prefWidth="177.0" />
-   <Label layoutX="178.0" layoutY="245.0" text="Current information">
+   <TextField fx:id="patientFname" layoutX="337.0" layoutY="87.0" prefHeight="25.0" prefWidth="180.0" promptText="First name" />
+   <TextField fx:id="patientLname" layoutX="337.0" layoutY="112.0" prefHeight="25.0" prefWidth="180.0" promptText="Last name" />
+   <Label fx:id="lookupStatus" layoutX="339.0" layoutY="190.0" prefHeight="17.0" prefWidth="177.0" />
+   <Label layoutX="96.0" layoutY="206.0" text="Current information">
       <font>
          <Font name="Georgia" size="20.0" />
       </font>
    </Label>
-   <Label layoutX="686.0" layoutY="243.0" text="New information">
+   <Label layoutX="574.0" layoutY="188.0" text="New information">
       <font>
          <Font name="Georgia" size="20.0" />
       </font>
    </Label>
-   <VBox layoutX="111.0" layoutY="282.0" prefHeight="141.0" prefWidth="113.0">
+   <VBox layoutX="73.0" layoutY="254.0" prefHeight="141.0" prefWidth="113.0">
       <children>
-         <Label prefHeight="30.0" prefWidth="107.0" text="Weight:">
+         <Label prefHeight="30.0" prefWidth="107.0" text="Weight(lbs):">
             <font>
                <Font size="15.0" />
             </font>
@@ -43,7 +43,7 @@
                <Insets />
             </VBox.margin>
             <padding>
-               <Insets left="50.0" />
+               <Insets left="20.0" />
             </padding>
          </Label>
          <Label layoutX="60.0" layoutY="10.0" prefHeight="30.0" prefWidth="113.0" text="Height:">
@@ -69,15 +69,15 @@
          </Label>
       </children>
    </VBox>
-   <VBox layoutX="239.0" layoutY="275.0" prefHeight="142.0" prefWidth="121.0">
+   <VBox layoutX="186.0" layoutY="253.0" prefHeight="128.0" prefWidth="121.0">
       <children>
          <TextField fx:id="currWeight" prefHeight="32.0" prefWidth="121.0" />
-         <TextField fx:id="currHeight" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="121.0" />
+         <TextField fx:id="currHeight" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="121.0" />
          <TextField fx:id="currBP" layoutX="10.0" layoutY="42.0" prefHeight="32.0" prefWidth="121.0" />
-         <TextField fx:id="currReason" layoutX="10.0" layoutY="74.0" prefHeight="32.0" prefWidth="121.0" />
+         <TextField fx:id="currReason" layoutX="10.0" layoutY="74.0" prefHeight="28.0" prefWidth="121.0" />
       </children>
    </VBox>
-   <VBox layoutX="662.0" layoutY="273.0" prefHeight="128.0" prefWidth="206.0">
+   <VBox layoutX="547.0" layoutY="235.0" prefHeight="128.0" prefWidth="206.0">
       <children>
          <TextField fx:id="newWeight" prefHeight="32.0" prefWidth="121.0" promptText="New weight" />
          <TextField fx:id="newHeight" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="121.0" promptText="New height" />
@@ -85,9 +85,9 @@
          <TextField fx:id="newReason" layoutX="10.0" layoutY="74.0" prefHeight="32.0" prefWidth="206.0" promptText="New reason" />
       </children>
    </VBox>
-   <Button fx:id="updatePatientInfoButton" layoutX="675.0" layoutY="411.0" mnemonicParsing="false" onAction="#addPatientInfoEvent" text="Update patient measurements" />
-   <Button fx:id="clearPatientInfoButton" layoutX="433.0" layoutY="270.0" mnemonicParsing="false" onAction="#clearPatientInfo" text="Clear new information" />
-   <Button fx:id="clearAllButton" layoutX="452.0" layoutY="312.0" mnemonicParsing="false" onAction="#clearAllInfo" text="Clear all forms " />
-   <Label fx:id="clearStatus" layoutX="388.0" layoutY="352.0" prefHeight="17.0" prefWidth="230.0" />
-   <Label fx:id="dbUpdateStatus" layoutX="650.0" layoutY="445.0" prefHeight="17.0" prefWidth="224.0" />
+   <Button fx:id="updatePatientInfoButton" layoutX="561.0" layoutY="377.0" mnemonicParsing="false" onAction="#addPatientInfoEvent" text="Update patient measurements" />
+   <Button fx:id="clearPatientInfoButton" layoutX="360.0" layoutY="233.0" mnemonicParsing="false" onAction="#clearPatientInfo" text="Clear new information" />
+   <Button fx:id="clearAllButton" layoutX="378.0" layoutY="284.0" mnemonicParsing="false" onAction="#clearAllInfo" text="Clear all forms " />
+   <Label fx:id="clearStatus" layoutX="324.0" layoutY="327.0" prefHeight="17.0" prefWidth="206.0" />
+   <Label fx:id="dbUpdateStatus" layoutX="568.0" layoutY="414.0" prefHeight="17.0" prefWidth="224.0" />
 </AnchorPane>
