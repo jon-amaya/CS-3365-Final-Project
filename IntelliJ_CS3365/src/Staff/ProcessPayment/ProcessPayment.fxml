@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Staff.ProcessPayment.ProcessPaymentController">
+   <children>
+      <Label layoutX="222.0" layoutY="14.0" prefHeight="29.0" prefWidth="236.0" text="Let's make a payment">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="225.0" layoutY="43.0" text="Please enter patient information:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="patientFname" layoutX="266.0" layoutY="68.0" promptText="First name" />
+      <TextField fx:id="patientLname" layoutX="266.0" layoutY="93.0" promptText="Last name" />
+      <Button fx:id="searchButton" layoutX="285.0" layoutY="130.0" mnemonicParsing="false" onAction="#checkPatientName" text="Search for patient" />
+      <Label fx:id="searchStatus" layoutX="208.0" layoutY="167.0" prefHeight="17.0" prefWidth="264.0" />
+      <Label layoutX="245.0" layoutY="210.0" text="Please choose payment type:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <VBox layoutX="456.0" layoutY="247.0" prefHeight="79.0" prefWidth="192.0">
+         <children>
+            <Button fx:id="debitButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="192.0" text="Debit" />
+            <Button fx:id="creditButton" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="191.0" text="Credit" />
+         </children>
+      </VBox>
+      <Button fx:id="cashButton" layoutX="93.0" layoutY="247.0" mnemonicParsing="false" onAction="#setCash" prefHeight="37.0" prefWidth="192.0" text="Cash" />
+      <Label layoutX="48.0" layoutY="305.0" prefHeight="17.0" prefWidth="91.0" text="Amount Due:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="paymentAmount" layoutX="139.0" layoutY="305.0" prefHeight="21.0" prefWidth="277.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="326.0" prefHeight="21.0" prefWidth="91.0" text="Amount Paid:" textAlignment="RIGHT">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="paidAmount" layoutX="139.0" layoutY="324.0" promptText="Enter amount to be paid" />
+      <Label layoutX="48.0" layoutY="401.0" prefHeight="21.0" prefWidth="91.0" text="Total change:" textAlignment="RIGHT">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="changeAmount" layoutX="139.0" layoutY="401.0" prefHeight="17.0" prefWidth="91.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="changeButton" layoutX="132.0" layoutY="362.0" mnemonicParsing="false" onAction="#getChange" text="Calculate change" />
+   </children>
+</AnchorPane>
