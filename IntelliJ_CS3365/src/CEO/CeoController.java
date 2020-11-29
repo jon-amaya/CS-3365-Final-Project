@@ -6,10 +6,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CeoController {
@@ -30,6 +33,35 @@ public class CeoController {
 
     @FXML
     private Button logoutButton;
+
+    @FXML
+    private Button reportButton;
+
+    //@FXML
+    //private TextField isReportReady;
+
+
+    //Function for viewReport Button
+    @FXML
+    public void viewReportButton(ActionEvent event) {
+        try {
+            //Open ViewReport.fxml
+            Stage ReportStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) FXMLLoader.load(getClass().getResource("/CEO/Report/ViewReport.fxml"));
+            CEO.Report.ReportController reportController = (CEO.Report.ReportController) loader.getController();
+
+            Scene scene = new Scene(root);
+            ReportStage.setScene(scene);
+            ReportStage.setTitle("Report Menu");
+            ReportStage.setResizable(false);
+            ReportStage.show();
+
+        } catch (Exception localException) {
+            localException.printStackTrace();
+        }
+    }
+
 
     //Function for logout button
     @FXML
