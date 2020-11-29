@@ -1,3 +1,8 @@
+/*
+    Sets up all the interactions and functionality of the nurse controller. Adds the buttons and allows for interactions
+    with the database to retrieve and update the patient information the nurse has access too.
+ */
+
 package Nurse;
 
 import datbaseUtil.dbConnect;

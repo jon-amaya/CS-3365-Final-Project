@@ -1,3 +1,8 @@
+/*
+    Makes the connection between the login of the system and verifying that the login is valid and allowing the
+    user access to the system with their role.
+ */
+
 package hospitalSystem;
 
 import java.sql.Connection;

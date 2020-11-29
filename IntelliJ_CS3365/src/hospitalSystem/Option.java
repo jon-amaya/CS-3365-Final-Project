@@ -1,3 +1,6 @@
+/*
+    Sets the different options for logging into the system, what type of role there can be.
+ */
 package hospitalSystem;
 
 public enum Option {

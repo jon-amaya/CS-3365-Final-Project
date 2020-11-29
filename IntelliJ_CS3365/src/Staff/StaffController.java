@@ -1,3 +1,8 @@
+/*
+    Sets up first interface that the staff uses to do all of their functions, and creates the buttons and fields needed
+    for the requirements.
+ */
+
 package Staff;
 
 import datbaseUtil.dbConnect;

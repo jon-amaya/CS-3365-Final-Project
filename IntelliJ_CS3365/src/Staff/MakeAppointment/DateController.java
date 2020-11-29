@@ -1,3 +1,7 @@
+/*
+    Sets up the interaction to check the dates for making new appointments.
+ */
+
 package Staff.MakeAppointment;
 
 import datbaseUtil.dbConnect;

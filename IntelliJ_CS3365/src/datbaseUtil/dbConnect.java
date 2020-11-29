@@ -1,3 +1,7 @@
+/*
+    Sets up the connection between the database and the system
+ */
+
 package datbaseUtil;
 
 import java.sql.Connection;

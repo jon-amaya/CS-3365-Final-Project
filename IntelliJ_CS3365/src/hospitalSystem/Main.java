@@ -1,3 +1,8 @@
+/*
+    Main controller of the system. Starts the main login page and runs the system to allow access to all other
+    interactions between users.
+ */
+
 package hospitalSystem;
 
 import  javafx.application.Application;

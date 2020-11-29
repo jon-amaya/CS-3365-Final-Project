@@ -1,3 +1,7 @@
+/*
+    Sets up the interactions and functionality to allow staff to make new appointments for patients
+ */
+
 package Staff.MakeAppointment;
 
 

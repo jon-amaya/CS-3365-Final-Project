@@ -1,3 +1,7 @@
+/*
+    Allows for logging out of the CEO screen once logged into it
+ */
+
 package CEO.Logout;
 
 import hospitalSystem.LoginController;

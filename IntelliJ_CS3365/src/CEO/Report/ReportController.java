@@ -1,3 +1,7 @@
+/*
+    Allows for retrieving the daily report if logged in as the CEO and viewing the report
+ */
+
 package CEO.Report;
 
 import datbaseUtil.dbConnect;

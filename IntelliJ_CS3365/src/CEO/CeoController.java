@@ -1,3 +1,7 @@
+/*
+    The main CEO controller, sets up the buttons used for CEO page functionality
+ */
+
 package CEO;
 
 import datbaseUtil.dbConnect;

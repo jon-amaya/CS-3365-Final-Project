@@ -1,3 +1,8 @@
+/*
+    Sets up the doctor pages functionality, from buttons to database interactions and retrieving and adding new patient
+    information.
+ */
+
 package Doctor;
 
 import datbaseUtil.dbConnect;

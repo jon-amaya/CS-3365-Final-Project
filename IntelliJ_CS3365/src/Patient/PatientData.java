@@ -1,3 +1,7 @@
+/*
+    Sets up the patients information and allows for interaction between the users and the patients information
+ */
+
 package Patient;
 
 import com.sun.javafx.iio.common.SmoothMinifier;

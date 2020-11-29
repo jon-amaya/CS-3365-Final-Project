@@ -1,3 +1,7 @@
+/*
+    Creates the interface for taking payments from the patient.
+ */
+
 package Staff.ProcessPayment;
 
 import datbaseUtil.dbConnect;

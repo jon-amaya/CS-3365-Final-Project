@@ -1,3 +1,7 @@
+/*
+    Sets up all the functionality to logout of the staff interface.
+ */
+
 package Staff.Logout;
 
 import hospitalSystem.LoginController;

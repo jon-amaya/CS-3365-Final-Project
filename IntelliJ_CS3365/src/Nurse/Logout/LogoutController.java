@@ -1,10 +1,9 @@
+/*
+    Used for setting up the logout part of the nurse interface
+ */
+
 package Nurse.Logout;
 
-/*
-* Logout Controller for nurse
-*
-*
- */
 
 import hospitalSystem.LoginController;
 import javafx.event.ActionEvent;

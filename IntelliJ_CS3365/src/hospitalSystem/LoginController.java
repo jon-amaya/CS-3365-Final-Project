@@ -1,3 +1,7 @@
+/*
+    Sets up the main login page of the hospital system. Adds the fields to enter the information for logging in.
+ */
+
 package hospitalSystem;
 
 import CEO.CeoController;

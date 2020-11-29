@@ -1,3 +1,7 @@
+/*
+    Allows for logging out of the doctor screen once logged into it
+ */
+
 package Doctor.Logout;
 
 import hospitalSystem.LoginController;
