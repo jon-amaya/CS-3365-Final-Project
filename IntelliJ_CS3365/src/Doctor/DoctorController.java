@@ -100,7 +100,7 @@ public class DoctorController {
             if(this.checkPatientInfo(this.patientFname.getText(), this.patientLname.getText())) {
 
                 //Method call to load patient data from database
-                loadPatientData(this.patientFname.getText(), this.patientLname.getText());
+                loadPatientData(this.patientFname.getText());
 
             } else {
                 this.lookupStatus.setText("Wrong patient information");
@@ -115,8 +115,8 @@ public class DoctorController {
     }
 
     //Method to load patient information on the screen
-    public void loadPatientData(String firstname, String lastname) {
-        String sql = "SELECT Weight, Height, BloodPressure, Reason FROM Patients WHERE Fname = ? and Lname = ?";
+    public void loadPatientData(String firstname) {
+        String sql = "SELECT Weight, Height, BloodPressure, Reason FROM Patients WHERE Fname = ?";
 
         try{
             PreparedStatement ps = connection.prepareStatement(sql);
@@ -229,6 +229,4 @@ public class DoctorController {
             localException.printStackTrace();
         }
     }
-
-
 }
